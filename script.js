@@ -72,16 +72,60 @@ function highestNumber (numbers){
 }
 highestNumber(numbers) */ 
 
-const demo = document.getElementById('demo')
+const answer = document.getElementById('answer')
 
 function myFunction() {
+
     let operation = prompt("Please select a operation: (1) Addition,(2) Subtraction,(3) Multiplication,(4)Division");
-    if (operation = 1) {
-        let addFirst = prompt("Please give me your first number:")
-        let addSecond = prompt ("Please give me your second number:")
+    let firstNum;
+    let secondNum;
+    let equals;
+
+    switch(operation){
+        case"1":
+            firstNum = prompt("Select first number: ")
+            secondNum = prompt("Select second number: ")
+            firstNum = parseInt(firstNum)
+            secondNum = parseInt(secondNum)
+
+            equals = firstNum + secondNum
+            answer.innerHTML = "Your answer is: " + equals
+            break;
+
+        case "2":
+            firstNum = prompt("Select first number: ")
+            secondNum = prompt("Select second number: ")
+            firstNum = parseInt(firstNum)
+            secondNum = parseInt(secondNum)
+
+            equals = firstNum - secondNum
+            answer.innerHTML = "Your answer is: " + equals
+            break;
+
+        case "3":
+            firstNum = prompt("Select first number: ")
+            secondNum = prompt("Select second number: ")
+            firstNum = parseInt(firstNum)
+            secondNum = parseInt(secondNum)
+    
+            equals = firstNum * secondNum
+            answer.innerHTML = "Your answer is: " + equals
+            break;
+            
+        case "4":
+            firstNum = prompt("Select first number: ")
+            secondNum = prompt("Select second number: ")
+            firstNum = parseInt(firstNum)
+            secondNum = parseInt(secondNum)
+    
+            equals = firstNum / secondNum
+            answer.innerHTML = "Your answer is: " + equals
+            break;       
         
+
+
     }
-    demo.innerHTML = "Your sum is: ", addFirst + addSecond
+    
   }
 
   myFunction()
