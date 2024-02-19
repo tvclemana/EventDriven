@@ -80,6 +80,11 @@ function myFunction() {
     let firstNum;
     let secondNum;
     let equals;
+    
+    if (operation === null){
+        answer.innerHTML = "You pressed Cancel."
+        return;
+    }
 
     switch(operation){
         case"1":
@@ -89,7 +94,7 @@ function myFunction() {
             secondNum = parseInt(secondNum)
 
             equals = firstNum + secondNum
-            answer.innerHTML = "Your answer is: " + equals
+            answer.innerHTML = firstNum + " plus " + secondNum + " is " + equals
             break;
 
         case "2":
@@ -99,7 +104,7 @@ function myFunction() {
             secondNum = parseInt(secondNum)
 
             equals = firstNum - secondNum
-            answer.innerHTML = "Your answer is: " + equals
+            answer.innerHTML = firstNum + " minus " + secondNum + " is " + equals
             break;
 
         case "3":
@@ -109,7 +114,7 @@ function myFunction() {
             secondNum = parseInt(secondNum)
     
             equals = firstNum * secondNum
-            answer.innerHTML = "Your answer is: " + equals
+            answer.innerHTML = firstNum + " times " + secondNum + " is " + equals
             break;
             
         case "4":
@@ -117,11 +122,13 @@ function myFunction() {
             secondNum = prompt("Select second number: ")
             firstNum = parseInt(firstNum)
             secondNum = parseInt(secondNum)
-    
             equals = firstNum / secondNum
-            answer.innerHTML = "Your answer is: " + equals
+            let remainder = firstNum % secondNum
+            answer.innerHTML = firstNum + " divided by " + secondNum + " is " + equals + " remainder " + remainder
             break;       
-        
+        default:
+            answer.innerHTML = "Invalid Operation."
+
 
 
     }
